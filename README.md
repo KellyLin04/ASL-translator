@@ -5,8 +5,6 @@ The inspiration for this project comes from our first hackathon. In our first ha
 ## What it does
 Our program essentially translates ASL, like subtitles in a movie. 
 
-![demo1](images/ASL1.png | width=250)
-
 ## How we built it
 We built this program using a Google API for hand tracking called Mediapipe. Using this API, we used the fact that we can process the hand into smaller pieces of information. More specifically, we could get the coordinates of specific points in our hand that at as identifiers. We used those identifiers as vectors, and we implemented a linear regression model to train our model to identify ASL hand gestures. All of the programming was done through Python. Then, we used HTML and CSS to create a web page and used Flask to implement our Python script into our web app.
 
@@ -16,3 +14,6 @@ At first, we ran into a problem with training our data. Our linear regression mo
 ## What's next for The Hand-y Translator
 Next, we are looking at expanding our project to more ASL gestures. Additionally, we want this to not just be a remote learning tool but also a tool that can make communication with people who use ASL easier. It is definitely a wonderful idea that can help many people. 
 
+![demo1](images/ASL1.png)
+![demo2](images/ASL2.png)
+![demo3](images/ASL3.png)
