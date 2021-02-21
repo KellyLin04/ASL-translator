@@ -33,14 +33,47 @@
         align-items: center;
         justify-content: center;
     }
+    .title{
+        font-family: "Montserrat";
+        text-align: center;
+        color: #FFF;
+        display: flex;
+        flex-direction: column;
+        /* align-items: center;
+        justify-content: center;
+        height: 100vh; */
+        letter-spacing: 1px;
+    }
+    h1 {
+        background-image: url(https://media2.giphy.com/media/h2U7mw5FtSqDenaGwJ/200.gif);
+        background-size: cover;
+        color: transparent;
+        -moz-background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-transform: uppercase;
+        font-size: 64px;
+        line-height: .75;
+        margin: 10px 0;
+    }
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
 </style>
 <title>Sign Language Interpreter</title>
 </head>
-
+    <div class = "title">
+    <h1>
+        Sign Language Interpeter
+    </h1>
+    </div>
 <body>
     <div id = "wrapper">
         <a href = "{{ url_for('main') }}" class = "button">Enter Here</a>
     </div>
- 
+ <img src = https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/American_Sign_Language_ASL.svg/1200px-American_Sign_Language_ASL.svg.png class="center">
 </body>
 </html>
