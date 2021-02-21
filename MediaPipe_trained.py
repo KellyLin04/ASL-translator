@@ -12,6 +12,9 @@ mp_hands = mp.solutions.hands
 
 #import trained W
 W = np.genfromtxt("w_opt_trained.csv", delimiter=",")
+W2 = np.genfromtxt("w_opt_trained_numbers.csv", delimiter=",")
+W_used = W
+trackW = 1
 
 # For webcam input:
 hands = mp_hands.Hands(
@@ -51,20 +54,35 @@ while cap.isOpened():
                 output3.append(item.z)
         
         output_test2 = np.transpose(output3)
-        res2 = np.round(np.matmul(np.transpose(W),output_test2))    
+        res2 = np.round(np.matmul(np.transpose(W_used),output_test2))    
         
         text = ""
         classification = res2
-        if (classification == 1):
-            text = "Hello"
-        elif (classification == 2):
-            text = "i"
-        elif (classification == 3):
-            text = "m"
-        elif (classification == 4):
-            text = "a"
-        elif (classification == 5):
-            text = "y"
+        
+        if (trackW == 1):
+            if (classification == 1):
+                text = "Hello"
+            elif (classification == 2):
+                text = "i"
+            elif (classification == 3):
+                text = "m"
+            elif (classification == 4):
+                text = "a"
+            elif (classification == 5):
+                text = "y"
+        else:
+            if (classification == 1):
+                text = "1"
+            elif (classification == 2):
+                text = "2"
+            elif (classification == 3):
+                text = "3"
+            elif (classification == 4):
+                text = "4"
+            elif (classification == 5):
+                text = "5"
+            elif (classification == 6):
+                text = "6"
             
         # font 
         font = cv2.FONT_HERSHEY_SIMPLEX 
@@ -89,6 +107,9 @@ while cap.isOpened():
             text2 += "_"
         elif (k%256 == ord("r")):
             text2 = ""
+        elif (k%256 == ord("w")):
+            W_used = W2
+            trackW = 2
             
         image = cv2.putText(image,text2, org2, font,  
                2*fontScale, (0,0,0), thickness, cv2.LINE_AA) 
@@ -99,6 +120,8 @@ while cap.isOpened():
         
 hands.close()
 cap.release()
+
+cv2.destroyAllWindows()
 
 
 # In[ ]:
