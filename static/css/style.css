@@ -1,0 +1,72 @@
+/* style.css */
+
+#container {
+    margin: 0px auto;
+    width: 500px;
+    height: 375px;
+}
+
+#videoElement {
+    width: 600px;
+    height: 600px;
+    /* background-color: #666; */
+}
+
+.title{
+	font-family: "Montserrat";
+	text-align: center;
+	color: #FFF;
+	display: flex;
+	flex-direction: column;
+	/* align-items: center;
+	justify-content: center;
+	height: 100vh; */
+	letter-spacing: 1px;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+h1 {
+	background-image: url(https://media2.giphy.com/media/h2U7mw5FtSqDenaGwJ/200.gif);
+	background-size: cover;
+	color: transparent;
+	-moz-background-clip: text;
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+	text-transform: uppercase;
+	font-size: 64px;
+	line-height: .75;
+	margin: 10px 0;
+}
+
+label{
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input,
+label{
+    margin: .4rem 0;
+    text-align: center;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    background-image: linear-gradient(rgba(28, 165, 210, 0.4), rgba(28, 165, 210, 1));
+  }
+  

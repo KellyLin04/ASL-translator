@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+    .button {
+    background-color: #17DEBF;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-family: "Montserrat";
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    height: 20px;
+    width: 100px;
+    }
+    html {
+        height: 100%;
+    }
+
+    body {
+        width: 100%;
+        background-image: linear-gradient(rgba(28, 165, 210, 0.4), rgba(28, 165, 210, 1));
+    }
+    #wrapper {
+        width: 100%;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+<title>Sign Language Interpreter</title>
+</head>
+
+<body>
+    <div id = "wrapper">
+        <a href = "{{ url_for('main') }}" class = "button">Enter Here</a>
+    </div>
+ 
+</body>
+</html>
